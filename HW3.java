@@ -2,9 +2,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 //import java.util.Scanner;
 
-/**
- * @author TODO: please add student ID and name here
- * Try to write some comments for your codes (methods, 10 points)
+/*
+ @author TODO: B0544115
  */
 public class HW3 {
 	public static void main(String[] args) {
