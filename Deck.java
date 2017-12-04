@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+
+
 public class Deck {
 	 ArrayList<Card> cards;
 		private ArrayList<Card> usedCard;
@@ -9,7 +11,7 @@ public class Deck {
 			usedCard=new ArrayList<Card>();
 			cards=new ArrayList<Card>();
 			int suit , rank ;
-			for(int x = 0 ; x < nDeck ; x ++)
+			for(int i = 0 ; i < nDeck ; i ++)
 			{
 				for(suit = 1 ; suit < 5 ; suit++)
 				{
@@ -23,9 +25,9 @@ public class Deck {
 			shuffle();
 		}
 		public void printDeck(){
-			for(int count = 0 ; count < cards.size() ; count ++)
+			for(int i = 0 ; count < cards.size() ; i ++)
 			{
-				Card card = cards.get(count);
+				Card card = cards.get(i);
 				card.printCard();
 			}
 		}
@@ -39,17 +41,18 @@ public class Deck {
 		        usedCard.remove(0);
 		        cards.add(replace);
 		     }
-			for(int count = 0 ; count < cards.size(); count++)
+			for(int i = 0 ; i < cards.size(); i++)
 			{
 				   Card temporary;
-				int j = shuf.nextInt(cards.size());
-				temporary = cards.get(count);
-				cards.set(count, cards.get(j));
-			    cards.set(j, temporary);
+				int a = shuf.nextInt(cards.size());
+				temporary = cards.get(i);
+				cards.set(i, cards.get(a));
+			    cards.set(a, temporary);
 			 }		   
 		}
 		public Card getOneCard(){
-			if(cards.size()!= 0){
+			if(
+				cards.size()!= 0){
 				nUsed = nUsed + 1;
 			    Card card = cards.get(0);
 			    usedCard.add(card);
@@ -66,6 +69,3 @@ public class Deck {
 			return cards;
 		}
 }
-
-
-
